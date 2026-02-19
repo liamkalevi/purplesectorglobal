@@ -101,7 +101,7 @@ nav.scrolled { padding:14px 48px;background:rgba(13,0,20,0.95); }
 .hamburger span { display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s; }
 .hero {
   position:relative;min-height:100vh;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;z-index:1;
+  align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;z-index:10;
 }
 .hero-glow {
   position:absolute;width:600px;height:600px;
@@ -154,6 +154,7 @@ section { position:relative;z-index:10;padding:120px 48px; }
 #team { max-width:1200px;margin:0 auto; }
 .team-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:64px; }
 .team-card {
+  z-index:10;
   position:relative;background:linear-gradient(180deg,rgba(192,32,255,0.06),rgba(13,0,20,0.8));
   border:1px solid rgba(192,32,255,0.1);border-radius:20px;overflow:hidden;transition:all 0.4s;cursor:default;
 }
@@ -166,6 +167,7 @@ section { position:relative;z-index:10;padding:120px 48px; }
 #travel { max-width:1200px;margin:0 auto; }
 .travel-content { margin-top:64px; }
 .travel-hero-box {
+  position:relative;z-index:10;
   position:relative;border-radius:24px;overflow:hidden;
   background:linear-gradient(135deg,var(--purple-mid),var(--purple-dark));
   padding:80px 64px;border:1px solid rgba(192,32,255,0.2);
@@ -219,10 +221,11 @@ footer { position:relative;z-index:10;padding:64px 48px 32px;border-top:1px soli
 .footer-links a:hover { color:var(--purple-primary); }
 .reveal { opacity:0;transform:translateY(40px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1); }
 .reveal.visible { opacity:1;transform:translateY(0); }
+.reveal { position:relative;z-index:10; }
 #raceCar {
   position:fixed;
   pointer-events:none;
-  z-index:5;
+  z-index:2;
   filter:drop-shadow(0 0 8px rgba(192,32,255,0.7)) drop-shadow(0 0 20px rgba(192,32,255,0.3));
   will-change:left,top,transform;
 }
@@ -240,7 +243,8 @@ footer { position:relative;z-index:10;padding:64px 48px 32px;border-top:1px soli
   .team-grid { grid-template-columns:1fr 1fr; }
   .travel-features { grid-template-columns:1fr; }
   .merch-preview { grid-template-columns:1fr 1fr; }
-  .travel-hero-box { padding:48px 32px; }
+  .travel-hero-box {
+  position:relative;z-index:10; padding:48px 32px; }
   .newsletter-form { flex-direction:column; }
   .newsletter-box { padding:40px 24px; }
   .footer-content { flex-direction:column;gap:24px;text-align:center; }
